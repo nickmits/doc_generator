@@ -1,0 +1,13 @@
+{
+  "entryPoints": ["src/services", "src/types.ts", "src/components"],
+  "entryPointStrategy": "expand",
+  "out": "docs/typedoc",
+  "tsconfig": "./tsconfig.json",
+  "excludePrivate": true,
+  "excludeInternal": true,
+  "includeVersion": true,
+  "readme": "none",
+  "excludeExternals": true,
+  "name": "doc_generator",
+  "exclude": ["**/*.test.ts", "**/*.test.tsx", "**/*.spec.ts"]
+}
