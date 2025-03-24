@@ -28,7 +28,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "docs": "npx typedoc"
+    "docs": "typedoc --options typedoc.json",
+    "typecheck": "tsc --noEmit"
   },
   "eslintConfig": {
     "extends": [
