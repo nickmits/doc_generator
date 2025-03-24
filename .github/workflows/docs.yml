@@ -9,7 +9,8 @@ on:
       - "typedoc.json"
       - "tsconfig.json"
       - "package.json"
-
+permissions:
+  contents: write
 jobs:
   docs:
     runs-on: ubuntu-latest
