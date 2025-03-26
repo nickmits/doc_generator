@@ -1,0 +1,39 @@
+---
+title: ItemList Component
+---
+
+import { ItemList } from "../../../src/components/ItemList";
+import React from "react";
+
+# `<ItemList />`
+
+The `ItemList` component displays a list of items with edit and delete actions using MUI components.
+
+---
+
+## ✨ Props
+
+| Prop       | Type                   | Description                        |
+| ---------- | ---------------------- | ---------------------------------- |
+| `items`    | `Item[]`               | Array of items to be displayed     |
+| `onEdit`   | `(item: Item) => void` | Callback triggered on edit click   |
+| `onDelete` | `(id: number) => void` | Callback triggered on delete click |
+
+---
+
+## 🧪 Example Usage
+
+```tsx
+import ItemList from "./ItemList";
+
+const items = [
+  { id: 1, name: "Item A", description: "Description A" },
+  { id: 2, name: "Item B", description: "Description B" },
+];
+
+<ItemList
+  items={items}
+  onEdit={(item) => console.log("Edit:", item)}
+  onDelete={(id) => console.log("Delete ID:", id)}
+/>;
+```
