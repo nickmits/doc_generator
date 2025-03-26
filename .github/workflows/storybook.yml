@@ -1,9 +1,12 @@
-name: Build and Deploy Storybook
+name: Build and Deploy Storybook (Docgen Spike)
 
 on:
   push:
-    branches: [main]
+    branches:
+      - docs/react-docgen-spike
   pull_request:
+    branches:
+      - docs/react-docgen-spike
     paths:
       - "src/**/*"
       - ".storybook/**/*"
@@ -31,9 +34,10 @@ jobs:
       - name: Build Storybook
         run: npm run build-storybook
 
-      - name: Deploy to GitHub Pages
-        if: github.ref == 'refs/heads/main'
+      - name: Deploy Storybook (Docgen Spike)
+        if: github.ref == 'refs/heads/docs/react-docgen-spike'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./storybook-static
+          destination_dir: docgen-spike
