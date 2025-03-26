@@ -29,7 +29,9 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "docs": "typedoc --options typedoc.json",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "eslintConfig": {
     "extends": [
@@ -50,7 +52,20 @@
     ]
   },
   "devDependencies": {
+    "react-docgen-typescript": "^2.2.2",
     "typedoc": "^0.28.1",
-    "typescript": "5.8"
+    "typescript": "5.8",
+    "storybook": "^8.6.9",
+    "@storybook/react": "^8.6.9",
+    "@storybook/react-webpack5": "^8.6.9",
+    "@storybook/addon-essentials": "^8.6.9",
+    "@storybook/blocks": "^8.6.9",
+    "@storybook/test": "^8.6.9",
+    "@storybook/preset-create-react-app": "^8.6.9",
+    "@storybook/addon-onboarding": "^8.6.9",
+    "@chromatic-com/storybook": "^3",
+    "@storybook/addon-interactions": "^8.6.9",
+    "webpack": "^5.98.0",
+    "prop-types": "^15.8.1"
   }
 }
